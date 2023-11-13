@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>registro</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear una cuenta</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+</head>
+<body>
+  
+<html class="h-full bg-gradient-to-t from-black via-pink-900 to-black">
+    <body class="h-full">
+      <!-- bg-gray-900 -->
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+      <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Crear una cuenta</h2>
+    </div>
+  
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <form class="space-y-6" action="/register" method="POST">
+        <div>
+            <label for="name" class="block text-sm font-medium leading-6 text-white">Nombre de usuario</label>
+            <div class="mt-2">
+              <input id="name" name="name" type="name" autocomplete="name" required class="block w-full rounded-md border-0 bg-black/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6">
+            </div>
+          </div>
 
-  <body>
-    <h1>Register Page</h1>
+          <!-- Correo -->
+        <div>
+          <label for="email" class="block text-sm font-medium leading-6 text-white">Ingresa tu correo electronico</label>
+          <div class="mt-2">
+            <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 bg-black/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6">
+          </div>
+        </div>
 
-    <form action="" method="POST">
-      {{ form.hidden_tag() }} {{ form.username(class='t-1 block w-30 px-3 py-2
-      mt-10 bg-white border border-slate-300 rounded-md text-sm shadow-sm
-      placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1
-      focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500
-      disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500
-      invalid:text-pink-600 focus:invalid:border-pink-500
-      focus:invalid:ring-pink-500') }} {{ form.email(class='t-1 block w-f30 px-3
-      mt-10 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm
-      placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1
-      focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500
-      disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500
-      invalid:text-pink-600 focus:invalid:border-pink-500
-      focus:invalid:ring-pink-500') }} {{ form.password(class='t-1 block w-30
-      mt-10 px-3 py-2 bg-white border border-slate-300 rounded-md text-sm
-      shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500
-      focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50
-      disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-      invalid:border-pink-500 invalid:text-pink-600
-      focus:invalid:border-pink-500 focus:invalid:ring-pink-500') }} {{
-      form.submit(class='bg-red-500') }}
-    </form>
-  </body>
+            <!-- Contraseña -->
+        <div>
+          <div class="flex items-center justify-between">
+            <label for="password" class="block text-sm font-medium leading-6 text-white">Ingresa una contraseña</label>
+
+<!--             <div class="text-sm">
+              <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300">Olvidaste la contraseña?</a>
+            </div> -->
+          </div>
+          <div class="mt-2">
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 bg-black/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6">
+          </div>
+        </div>
+  
+        <div>
+          <button type="submit" class="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Registrarse</button>
+        </div>
+      </form>
+  
+    </div>
+  </div>
+  
+  
+</body>
 </html>
