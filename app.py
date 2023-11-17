@@ -15,6 +15,8 @@ class User(db.Model):
 with app.app_context():
     db.create_all()
 
+
+
 @app.route('/register', methods=['GET','POST'])
 def register():
     if request.method == 'POST':
@@ -35,11 +37,8 @@ def login():
         email = request.form['email']
         password=request.form['password']
         user=User.query.filter_by(email=email).first()
-        if user:
-            if user and password == user.password:
-                return render_template('/welcome.html')
-            else:
-                return render_template('/login.html')
+        if user and password == user.password:
+            return render_template('welcome.html')
 
     return render_template('login.html')
 
